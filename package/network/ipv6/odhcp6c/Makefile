@@ -21,6 +21,8 @@ PKG_LICENSE:=GPL-2.0
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
 
+$(warning print TARGET_CFLAGS: $(TARGET_CFLAGS))
+
 CMAKE_OPTIONS += \
 	-DUSE_LIBUBOX=on
 

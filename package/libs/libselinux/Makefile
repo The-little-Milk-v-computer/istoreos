@@ -23,6 +23,8 @@ HOST_BUILD_DEPENDS:=libsepol/host musl-fts/host pcre2/host
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/host-build.mk
 
+TARGET_LDFLAGS += -lpcre2-8
+
 LIBSELINUX_UTILS := \
 	avcstat \
 	compute_av \
