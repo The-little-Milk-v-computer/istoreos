@@ -17,6 +17,7 @@
 /overlay
 /package/feeds
 /package/openwrt-packages
+/target/linux/feeds
 /*.patch
 /llvm-bpf*
 /.vermagic
