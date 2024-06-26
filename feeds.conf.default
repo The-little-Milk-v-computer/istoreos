@@ -7,5 +7,6 @@ src-git store https://github.com/linkease/istore.git;main
 # argon, etc.
 src-git third https://github.com/jjm2473/openwrt-third.git;main
 src-link  vizos  /home/liushijiao/feeds-vizos
-src-git cvi_pinmux https://github.com/milkv-duo/cvi-pinmux.git;main
-src-git duo_pinmux https://github.com/milkv-duo/duo-pinmux.git;main
+# src-git cvi_pinmux https://github.com/milkv-duo/cvi-pinmux.git;main
+# src-git duo_pinmux https://github.com/milkv-duo/duo-pinmux.git;main
+# src-link  duoarm  /home/liushijiao/feeds-duoarm
