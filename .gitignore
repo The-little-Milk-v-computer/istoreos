@@ -35,4 +35,3 @@ git-src
 .ccache
 .vscode*
 feeds.conf.default
-/host-tools
