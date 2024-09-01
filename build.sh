@@ -36,7 +36,15 @@ elif [ -d "./host-tools/gcc/riscv64-linux-musl-x86_64" ]; then
 else
     echo -e '\033[32mthe host-tools not exits, downloading it now...\033[0m'
     sed -i 's|/opt/host-tools/gcc/riscv64-linux-musl-x86_64|$(TOPDIR)/host-tools/gcc/riscv64-linux-musl-x86_64|g' .config
-    git clone https://github.com/milkv-duo/host-tools.git
+    toolchain_url="https://sophon-file.sophon.cn/sophon-prod-s3/drive/23/03/07/16/host-tools.tar.gz"
+    toolchain_file=${toolchain_url##*/}
+    wget ${toolchain_url} -O ${toolchain_file}
+
+    print_info "Extracting ${toolchain_file}..."
+    tar -xf ${toolchain_file}
+
+    [ -f ${toolchain_file} ] && rm -rf ${toolchain_file}
+
 fi
 
 echo -e "\033[32m$(nproc) thread compile.\033[0m"
