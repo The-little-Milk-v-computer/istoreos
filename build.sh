@@ -31,11 +31,11 @@ esac
 if [ -d "/opt/host-tools/gcc/riscv64-linux-musl-x86_64" ]; then
     echo 'the host-tools exits.'
 elif [ -d "./host-tools/gcc/riscv64-linux-musl-x86_64" ]; then
-    sed -i 's|/opt/host-tools/gcc/riscv64-linux-musl-x86_64|./host-tools/gcc/riscv64-linux-musl-x86_64|g' .config
+    sed -i 's|/opt/host-tools/gcc/riscv64-linux-musl-x86_64|$(TOPDIR)/host-tools/gcc/riscv64-linux-musl-x86_64|g' .config
     echo 'the host-tools exits.'
 else
     echo -e '\033[32mthe host-tools not exits, downloading it now...\033[0m'
-    sed -i 's|/opt/host-tools/gcc/riscv64-linux-musl-x86_64|./host-tools/gcc/riscv64-linux-musl-x86_64|g' .config
+    sed -i 's|/opt/host-tools/gcc/riscv64-linux-musl-x86_64|$(TOPDIR)/host-tools/gcc/riscv64-linux-musl-x86_64|g' .config
     git clone https://github.com/milkv-duo/host-tools.git
 fi
 
