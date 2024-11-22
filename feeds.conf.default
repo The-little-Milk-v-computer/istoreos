@@ -8,8 +8,8 @@ src-git store https://github.com/linkease/istore.git;main
 src-git third https://github.com/jjm2473/openwrt-third.git;main
 # vizos, etc.
 # src-link  vizos  ../feeds-vizos
-# src-git cvi_pinmux https://github.com/milkv-duo/cvi-pinmux.git;main
+src-git cvi_pinmux https://github.com/milkv-duo/cvi-pinmux.git;main
 # src-git duo_pinmux https://github.com/milkv-duo/duo-pinmux.git;main
 # src-link  duoarm  ../feeds-duoarm
 # src-link  duoapp  ../openwrt-app-actions
-src-git vizos https://github.com/draftbottle/VizOS.git;vizos
+# # src-git vizos https://github.com/draftbottle/VizOS.git;vizos
